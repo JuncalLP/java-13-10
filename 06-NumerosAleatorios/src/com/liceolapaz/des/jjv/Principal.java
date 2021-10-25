@@ -44,7 +44,7 @@ public class Principal {
 		}
 		// Si no lo es y no hay más intentos, imprimir mensaje. 
 		else 
-			System.out.println("No se ha podido encontrar el número en " + maximoIntentos +"intento(s)");
+			System.out.println("No se ha podido encontrar el número en " + maximoIntentos +" intento(s)");
 	}
 
 	private static int generarNumeroAleatorio(int min, int max) {

@@ -1,10 +1,12 @@
 package com.liceolapaz.des.jjv;
 
+import java.text.DecimalFormat;
 import java.util.Scanner;
 
 public class Principal {
 
 	public static void main(String[] args) {
+		DecimalFormat numberFormat = new DecimalFormat("#.00");
 		do {
 
 			escribirMenu();
@@ -14,18 +16,18 @@ public class Principal {
 			break;
 			} else if (opcion == 1) {
 				pedirCantidad();
-				int cantidad = leerEntero();
-				System.out.println("La cantidad en euros es " +(cantidad*1.16) +"€");
+				double cantidad = leerEntero();
+				System.out.println("La cantidad en euros es " +(numberFormat.format(cantidad*1.16)) +"€");
 				
 			} else if (opcion == 2) {
 				pedirCantidad();
-				int cantidad = leerEntero();
-				System.out.println("La cantidad en euros es " +(cantidad*0.84) +"€");
+				double cantidad = leerEntero();
+				System.out.println("La cantidad en euros es " +(numberFormat.format(cantidad*0.84)) +"€");
 				
 			} else if (opcion == 3) {
 				pedirCantidad();
-				int cantidad = leerEntero();
-				System.out.println("La cantidad en euros es " +(cantidad*133.33) +"€");
+				double cantidad = leerEntero();
+				System.out.println("La cantidad en yenes es " +(numberFormat.format(cantidad*133.33)) +"€");
 				
 			} else {
 				System.out.println("No es una opción válida.");
